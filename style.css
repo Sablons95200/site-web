@@ -1,0 +1,373 @@
+/*------------------------------------Réglage Menu ------------------------------*/
+
+/*----------Réglage générale de la page----------------*/
+*{
+     margin: 0;/*Marges extérieures de l'élément*/                               
+     padding: 0;/*Marges intérieures de l'élément*/
+     box-sizing: border-box; /*définit la façon dont la hauteur et la largeur totale*/  
+     /* BORDER-BOX: indique au navigateur de prendre en compte la bordure et le remplissage dans la valeur définie pour la largeur et la hauteur.*/
+
+} 
+   /*------------------Globalité de la page----------------------*/
+body{
+    padding: 0%;
+    margin: 0%;
+    overflow-x: hidden;
+    background-color: #FFDEAD;
+}      
+
+.navbar{                /*---------------------------------------la barre de navigation (navbar)------------------------------*/
+    display: flex;      /*-----------------Afficher un élément*/  /* flex(permet de definire la capacité d'un élément flexible)-------------------*/
+    justify-content: center; /*----------------Le positionnement des éléments-----------------------*/
+    align-items: center;                   /*-----------------------Le positionnement de la boite----------------*/
+    background-color:rgba(0, 0, 0,  0.5);
+    position: sticky;
+    top: 0;
+    z-index: 999;/*-------------------------L'ordre des images------------*/                   
+
+
+}
+
+/*------Menu navigation pour ul (couleur,position...) ------*/
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+
+}
+
+
+/*------Menu navigation pour ul li (couleur,position...) ------*/ 
+
+.navbar ul li{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+}
+
+
+/*------Menu navigation pour ul li (couleur,position...) ------*/
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;                /*---------------------------Couleur  --------------*/
+    padding: 8px 25px; 
+    transition: all .5s ease;
+}
+
+
+/*------Menu navigation pour ul li a (couleur,position...)------*/
+
+.navbar ul li a:hover{
+    background-color: white;            /*---------------------------Couleur de fond --------------*/
+    color: black;                       /*---------------------------Couleur  --------------*/
+    box-shadow: 0 0 10px white; 
+}
+
+
+
+/*------------------------------Page d'accueil -----------------------------*/
+#Home{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0,  0.5);      /*---------------------------Couleur de fond --------------*/
+    height: 840px;                             /*---------------------------Hauteur--------------*/
+    justify-content: center;
+    align-items: center;       
+    color: white;                  /*---------------------------Couleur  --------------*/
+
+}
+/*------------------------------Position de l'arrière plan------------------------------*/
+
+
+#Home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;                                    
+    background: url('image-site.png') no-repeat center center/cover;      /*----------Image du centre sociale ----------------*/
+    height: 900px;           /*---------------------------Hauteur--------------*/
+    width: 100%;            /*---------------------------Largeur -------------------------*/
+    z-index: -1; 
+    opacity: .8;
+
+}
+/*------------------Position du titre--------------------*/
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    
+}
+
+.headings{
+    font-family: century;
+    font-size: 3rem;      
+    text-align: center;           /*---------------------------Positionnement du texte  --------------*/
+    margin: 40px 0px;            /*---------------------------Rembourrage--------------*/
+
+
+
+}
+/*--------------------Bouton  voir plus de détails et qui sommes nous ? --------------------*/
+.btn{
+    padding: 10px 35px;
+    background-color: transparent;        /*---------------------------Couleur de fond --------------*/
+    border: 1px solid white;            /*---------------------------Bordure --------------*/
+    color: white;                     /*---------------------------Couleur  --------------*/
+    outline: none;
+    transition: .6s ease;
+    text-decoration: none;
+}
+.btn:hover{
+    cursor: pointer;                  /*---------------------------Curseur --------------*/
+    background-color: white;          /*---------------------------Couleur de fond  --------------*/
+    color: black;                     /*---------------------------Couleur--------------*/
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px  white;
+    font-weight: bold;
+}
+
+ /*---------------------------Partie boutton --------------*/
+
+.btn2{
+    padding: 10px 35px;
+    background-color: transparent;            /*--------------Couleur fond style transparent -----------*/
+    border: 1px solid black;
+    color: black;                       /*--------------Couleur  -----------*/
+    outline: none;
+    transition: .6s ease;
+    text-decoration: none;
+    
+}
+
+/*---------------------------Partie boutton --------------*/
+
+.btn:hover{
+    cursor: pointer;                      /*--------------curseur-----------*/
+    background-color: white;             /*--------------Couleur fond -----------*/
+    color: black;                       /*--------------Couleur  -----------*/
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px  white;
+    font-weight: bold;
+}
+   
+  
+  /*---------------------Nous contacter---------------*/
+
+
+
+
+.title{
+    text-align: center;    /*--------------Texte centrer-----------*/      
+    font-size: 40px;
+    font-weight: 500;                             
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    position: relative;         /*--------------Posionnement du texte -----------*/
+
+}
+
+
+
+.about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about-content .left{
+    width: 45%;                       /*--------------Largeur  -----------*/
+}
+
+
+.right{
+    width: 55%;                       /*--------------Largeur de l'écriture -----------*/
+}
+
+                            /*----------Titre de la partie-----------*/ 
+.text{
+    font-size: 22px;                 
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: rgb(186, 85, 211);
+}
+/*---------------------------------Réglage du 2e image ---------------------------------*/
+.about2-img{
+        width: 700px;                        /*--------------Largeur -----------*/
+        border-radius: .5rem;
+        justify-self: center;
+        align-self: center;
+}
+
+img{
+    height: 600px;                      /*--------------Hauteur -----------*/
+    width: 400px;                     /*--------------Largeur -----------*/
+    object-fit: cover;
+}
+
+/*------------------------------Réglage du 3e image-----------------------------------*/
+.about3-img{
+        width: 700px;       /*--------------Largeur-----------*/
+        border-radius: .5rem;
+        justify-self: center;
+        align-self: center;            
+}
+
+img{
+    height: 300px;            /*--------------Hauteur -----------*/
+    width: 400px;              /*--------------Largeur -----------*/
+    object-fit: cover;
+}
+
+/*-----------------------------Réglage du 4e image----------------------------------*/
+.about4-img{
+        width: 300px;                       /*--------------Largeur -----------*/
+        border-radius: .5rem;
+        justify-self: center;
+        align-self: center;
+}
+
+img{
+    height: 300px;                  /*--------------Hauteur -----------*/
+    width: 400px;                  /*--------------Largeur  -----------*/
+    object-fit: cover;
+}
+
+/*-----------------------------Réglage du 5e image-----------------------------------*/
+
+.about5-img{
+        width: 600px;         /*--------------Largeur-----------*/
+        border-radius: .5rem;
+        justify-self: center;
+        align-self: center;
+}
+
+img{
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+}
+/*-----------------------------------Activités---------------------------------------*/
+
+
+/*Style des titres (pour parties,sous-parties...) */
+h3{
+ text-align: center;     /*------positionnement du titre----*/
+ font-size: 200%;
+ margin-top: 2%;
+ margin-bottom: 2%;
+ margin-top: 0%;
+ color: #0000FF;         /*-----------Couleur du titre ---------*/
+}
+
+
+
+
+/*-----------------------Partie qui sommes-nous ?----------------------------*/
+.par{
+    
+    background:url('localis centre.PNG') no-repeat center center/cover;     /*--------------image de la localisation du centre ---------------*/
+    
+    height: 800px;            /*--------------Hauteur -----------*/
+    width: 200%;              /*--------------largeur -----------*/
+    background-color: FFEBCD; /*--------------Couleur de fond -----------*/
+
+}
+
+.title2{                  /*--------Partie titre -----------*/
+
+    color: black;                   /*--------------couleur du titre 2-----------*/
+    position: relative;              /*--------------Positionnement  -----------*/
+    text-align: left;                /*--------------Posionnement du texte à gauche -----------*/
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*-----------------Nous  contacter --------------------------*/
+#contact{
+    width: 100%;               /*--------------Largeur -----------*/
+    height: 100%;             /*--------------Hauteur -----------*/
+    background-color: #FFEBCD;    /*-------------- Couleur de fond -----------*/
+    color: #000000;                /*--------------Couleur -----------*/
+    padding: 0% 0% 0.5% 0%;         
+}
+
+    /*Tableau pour inserer les coordonées */
+
+#contact table{
+    padding: 2%;        /*--------------rembourrage-----------*/
+    margin: 2% auto 2% auto;     /*--------------Marge -----------*/
+    background: #FFE4C4;         /*--------------Couleur de fond  -----------*/
+    height: 5%;                  /*--------------Hauteur -----------*/
+    width: 75%;                      /*--------------Largeur -----------*/
+}
+
+td{width: 50%; text-align: center;}
+
+/*Couleur pour  un tableau*/
+
+#contact a{color: black;}
+
+
+/*-----------------Diferents tables-----------------------*/
+
+#contact2{
+    width: 100%;
+    height: 100%;
+    background-color: #FFEBCD;
+    color: #000000;
+    padding: 0% 0% 0.5% 0%;
+}
+
+
+    /*Tableau pour inserer les coordonées */
+
+#contact2 table{
+    padding: 2%;
+    margin: 2% auto 2% auto;
+    background: #FFE4C4;
+    height: 5%;
+    width: 75%;
+}
+
+
+
+td{width: 50%; text-align: center;}
+
+/*Couleur pour  un tableau*/
+
+#contact2 a{color: black;}
+
+/*----------------Diferents tables -------------------*/
+#contact3{
+    width: 100%;
+    height: 100%;
+    background-color: #FFEBCD;
+    color: #000000;
+    padding: 0% 0% 0.5% 0%;
+}
+    /*Tableau pour inserer les coordonées */
+
+#contact3 table{
+    padding: 2%;
+    margin: 2% auto 2% auto;
+    background: #FFE4C4;
+    height: 5%;
+    width: 75%;
+}
+
+
+td{width: 50%; text-align: center;}
+
+/*Couleur pour  un tableau*/
+
+#contact3 a{color: black;}
+
+
+
+
